@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the weatherAppApp
  */
- angular.module('weatherAppApp')
+ /*angular.module('weatherAppApp')
    .controller('MainCtrl', function ($scope, current) {
      $scope.current = current.query();
 
@@ -16,7 +16,7 @@
             location: $scope.location
         });
     };
-   });
+  });*/
 
    angular.module('weatherAppApp')
   .controller('MainCtrl', function ($scope, citysearch) {

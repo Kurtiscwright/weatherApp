@@ -8,10 +8,10 @@
  * Controller of the weatherAppApp
  */
 angular.module('weatherAppApp')
-  .controller('CurrentCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+.controller('CurrentCtrl', function ($scope, $routeParams, current) {
+  $scope.cityID = $routeParams.cityID;
+
+  $scope.currentWeather = current.query({
+      cityID: $routeParams.cityID
   });
+});
