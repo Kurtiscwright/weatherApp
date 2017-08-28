@@ -7,17 +7,19 @@
  * # forecast
  * Factory in the weatherAppApp.
  */
-angular.module('weatherAppApp')
-  .factory('forecast', function () {
-    // Service logic
-    // ...
+ angular.module('weatherAppApp')
+   .factory('forecast', function ($resource) {
+     // Service logic
+     // ...
 
-    var meaningOfLife = 42;
-
-    // Public API here
-    return {
-      someMethod: function () {
-        return meaningOfLife;
-      }
-    };
-  });
+     // Public API here
+     return $resource('http://api.openweathermap.org/data/2.5/forecast/daily?id=:cityID&cnt=16&units=imperial&APPID=dedd4adbb35222b13f6ad8b45441a303', {}, {
+       query: {
+         method:'GET',
+         params:{
+           cityID: '4717560' // Paris, France ID
+         },
+         isArray:false
+       }
+     });
+   });
