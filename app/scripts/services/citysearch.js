@@ -13,7 +13,7 @@
      // ...
 
      // Public API here
-     return $resource('http://api.openweathermap.org/data/2.5/find?q=:query&type=like&mode=json&APPID=dedd4adbb35222b13f6ad8b45441a303', {}, {
+     return $resource('http://api.openweathermap.org/data/2.5/find?q=:query&units=imperial&type=like&mode=json&APPID=dedd4adbb35222b13f6ad8b45441a303', {}, {
        find: {
          method: 'GET',
          params: {
