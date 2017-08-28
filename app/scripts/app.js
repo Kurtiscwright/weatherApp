@@ -17,6 +17,7 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
+    'ngStorage',
     'ngTouch'
   ])
   .config(function ($routeProvider) {
@@ -31,12 +32,12 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
-      .when('/current/:cityID', {
+      .when('#/current/:cityID', {
         templateUrl: 'views/current.html',
         controller: 'CurrentCtrl',
         controllerAs: 'current'
       })
-      .when('/forecast:cityID', {
+      .when('#/forecast/:cityID', {
         templateUrl: 'views/forecast.html',
         controller: 'ForecastCtrl',
         controllerAs: 'forecast'
